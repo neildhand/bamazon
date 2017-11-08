@@ -88,7 +88,7 @@ function userPrompt() {
 
 			console.log("Awesome! We have your items in stock! \n");
 			
-			diff = chosenItem.stock_quantity -= parseInt(answer.askUnits);
+			var diff = chosenItem.stock_quantity -= parseInt(answer.askUnits);
 
 			console.log("Your order has been successfully placed");
 			connection.query(
@@ -108,7 +108,7 @@ function userPrompt() {
 				//console.log(result.affectedRows + " products changed");
 
 				console.log(chosenItem);
-
+				//console.log("Your order was successfully placed.");
 				userPrompt();
 			}
 			);
